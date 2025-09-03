@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerta Segura</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <header class="header">
+    <h1>🚨 Alerta Segura</h1>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h2>📝 Registrar Emergencia</h2>
+      <form id="emergencyForm">
+        <div class="form-group">
+          <label for="nombre">👤 Nombre del reportante</label>
+          <input type="text" id="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="tipo">⚠ Tipo de emergencia</label>
+          <input type="text" id="tipo" required>
+        </div>
+        <div class="form-group">
+          <label for="lugar">📍 Lugar</label>
+          <input type="text" id="lugar" required>
+        </div>
+        <button type="submit" class="btn-primary">
+          <span class="btn-text">Registrar</span>
+          <span class="spinner"></span>
+        </button>
+      </form>
+    </section>
+
+    <section class="results-card">
+      <div class="results-header">
+        <h2>📋 Emergencias Registradas</h2>
+        <span id="counter">0</span>
+      </div>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AlertaSegura</p>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
