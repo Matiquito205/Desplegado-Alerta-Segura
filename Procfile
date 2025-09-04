@@ -1,1 +1,2 @@
-web: gunicorn alerta_segura.wsgi:application
+web: gunicorn alerta_segura.wsgi
+
